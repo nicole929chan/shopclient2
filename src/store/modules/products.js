@@ -13,6 +13,11 @@ export default {
     products(state) {
       return state.products;
     },
+    printTitle() {
+      return (product) => {
+        return product.title;
+      };
+    },
   },
   mutations: {
     add(state, payload) {
