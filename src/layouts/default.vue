@@ -1,12 +1,15 @@
 <template>
-  <nav>
-    <ul>
-      <li>nav one</li>
-      <li>nav two</li>
-    </ul>
-  </nav>
+  <div>
+    <Navigation />
+  </div>
 </template>
 
 <script>
-export default {};
+import Navigation from './partials/Navigation.vue';
+
+export default {
+  components: {
+    Navigation,
+  },
+};
 </script>
