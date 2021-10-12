@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <TestView />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TestView from './components/TestView.vue';
-
 export default {
   name: 'App',
-  components: {
-    TestView,
-  },
+  components: {},
 };
 </script>
 
