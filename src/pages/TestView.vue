@@ -12,9 +12,16 @@
       consequuntur dolorem magnam quia ipsum voluptatibus iste suscipit, alias
       laboriosam, nam sint nobis, ut praesentium quod enim porro ipsam atque?
     </p>
+    <TestView />
   </div>
 </template>
 
 <script>
-export default {};
+import TestView from '@/components/TestView';
+
+export default {
+  components: {
+    TestView,
+  },
+};
 </script>

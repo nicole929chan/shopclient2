@@ -1,18 +1,25 @@
 <template>
   <div>
-    <button @click="getCategories">categories</button>
+    <v-btn @click="getCategories">categories</v-btn>
     {{ JSON.stringify(categories) }}
     <hr />
-    <button @click="getProducts">products</button>
-    <button @click="addProduct">add</button>
+    <v-btn @click="getProducts">products</v-btn>
+    <v-btn @click="addProduct">add</v-btn>
     {{ JSON.stringify(products) }}
     <hr />
     <div>higher order function 的用法</div>
     {{ printTitle }}
+    <hr />
+    <div>display all products using getters</div>
+    <ul>
+      <li v-for="fool in fools" :key="fool.slug">{{ fool.title }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'TestView',
   data() {
@@ -22,6 +29,12 @@ export default {
     };
   },
   computed: {
+    ...mapGetters({
+      fools: 'products/products',
+    }),
+    // fools() {
+    //   return this.$store.getters['products/products'];
+    // },
     printTitle() {
       // 不是取state這種一般的用法
       // 而是返回函數, 挖~ Higher Order Function 又來了

@@ -5,7 +5,7 @@ export default {
       {
         id: 1,
         slug: 'fake-product-1',
-        title: 'Fake Product 1',
+        title: 'Fake Product one123',
       },
     ],
   },
